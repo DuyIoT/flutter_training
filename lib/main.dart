@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterappbtvn/my_info.dart';
+import 'package:flutterappbtvn/insert_student_screen.dart';
+import 'package:flutterappbtvn/student_list_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,7 +22,11 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyInfo(),
+      home: StudentListScreen(),
+      routes: {
+        InsertStudentScreen.routName: (context) => InsertStudentScreen(),
+        StudentListScreen.routName: (context) => StudentListScreen(),
+      },
     );
   }
 }
